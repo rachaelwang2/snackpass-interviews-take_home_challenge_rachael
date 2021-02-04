@@ -48,7 +48,7 @@ For sample data, use [Sample Orders](https://docs.google.com/spreadsheets/d/1xfA
    - This is an android studio app coded in Java with Firebase Database using provided sample data. 
    - Converted SampleData into json format and uploaded to Firebase
    - Here's an image of the data in Firebase: 
-   - <img src='https://imgur.com/XeZoYpl.png' title='App Screenshot' width='200px' />
+   <img src='https://imgur.com/XeZoYpl.png' title='App Screenshot' width='400px' />
 
 ### Important Files:
 #### MainActivity_d.java
@@ -67,10 +67,10 @@ For sample data, use [Sample Orders](https://docs.google.com/spreadsheets/d/1xfA
    - implement new class Orders, calculate time date differences with DateTimeFormatter
 
 #### activity_main.xml
-   - <img src='https://imgur.com/YFQOEkB.png' title='App Screenshot' width='200px' />
+   <img src='https://imgur.com/YFQOEkB.png' title='App Screenshot' width='400px' />
    
 #### row_layout.xml
-   - <img src='https://imgur.com/tFCMU3G.png' title='App Screenshot' width='200px' />
+   <img src='https://imgur.com/tFCMU3G.png' title='App Screenshot' width='400px' />
    
 
 ### How to setup, how to run it
