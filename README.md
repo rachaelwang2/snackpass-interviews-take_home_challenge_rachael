@@ -33,3 +33,6 @@ Your solution content goes here... Please provide an explaination on
 2. how to setup 
 3. how to run it
 You could be as verbose as you would like for providing details on approach, setup etc.
+
+<img src='https://imgur.com/XvRD4Sd' title='App Screenshot' width='400px' />
+
