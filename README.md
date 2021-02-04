@@ -28,7 +28,6 @@ Assume the customers around a campus order 5000 orders a day from 50 local resta
 For sample data, use [Sample Orders](https://docs.google.com/spreadsheets/d/1xfAjSlBflehOYj4O7I2YkfcBB1b9VgSHg9X-SmRWmsE/edit#gid=280279953)
  
 ## Solution
-Your solution content goes here... Please provide an explaination on 
 
 <img src='https://imgur.com/XvRD4Sd.gif' title='App Screenshot' width='400px' />
 
@@ -47,8 +46,30 @@ Your solution content goes here... Please provide an explaination on
 
 ### How you solved the problem
    - This is an android studio app coded in Java with Firebase Database using provided sample data. 
-   - Pagination, 35 items loaded at a time, as items are loaded their counts are stored into a HashMap to return "recent purchases"
-   - 
+   - Converted SampleData into json format and uploaded to Firebase
+   - Here's an image of the data in Firebase: 
+   - <img src='https://imgur.com/a/oHjjaD3' title='App Screenshot' width='200px' />
+
+#### MainActivity_d.java
+   - Infinite Scroll, Pagination with RecycleView, 35 items loaded at a time
+   - currentTime is set to "03/08/2019 21:58", this is the most recent date; using today's date would result in no trending items 
+   - As items are loaded their counts are stored into a HashMap "recent_purchases" to return "recent purchases", this counts all of "item_name" that is loaded
+   - helper functions "addDic" and "getRecentPurchases" help us count and get correct values for RecyclerView 
+   - "RecentPurchase_and_Time implements Comparator<Orders>" is used to help us sort "Orders" so we can determine which trending products are higher, see class for math calculation 
+   - Use FirebaseSQL (very limited)
+   - "OnCreate", "getOrders", "getLastKeyfromFirebase" implement infinite scroll, there are no repeating items and all items have been purchased at least once in last 48 hrs
+   
+#### MyAdapter_d.java
+   - "addAll" Orders from MainActivity_d, change text in RecyclerView, randomize food images 
+
+#### Orders.java
+   - implement new class Orders, calculate time date differences with DateTimeFormatter
+
+#### activity_main.xml
+   - <img src='https://imgur.com/a/343Niuj' title='App Screenshot' width='200px' />
+   
+#### row_layout.xml
+   - <img src='https://imgur.com/a/vOmEiU1' title='App Screenshot' width='200px' />
    
 
 ### How to setup, how to run it
@@ -56,6 +77,3 @@ Your solution content goes here... Please provide an explaination on
    - Connect to internet and to database --> Tools --> Firebase --> Realtime Database (should already be connected)
    - Run Android app emulator (any model) 
    
-
-You could be as verbose as you would like for providing details on approach, setup etc.
-
