@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon1" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@id/iv"
+        android:text="name of the product"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id = "@+id/recent_purchases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:text="number of recent purchases"
+        />
+
+    <TextView
+        android:id = "@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/recent_purchases"
+        android:text="price of the object"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/price"
+        android:text="time of purchase"
+        android:textColor="#448AFF" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/trending"
+        android:layout_alignTop="@id/iv"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/trending" />
+
+
+</RelativeLayout>
