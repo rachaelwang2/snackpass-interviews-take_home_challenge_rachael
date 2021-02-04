@@ -29,10 +29,33 @@ For sample data, use [Sample Orders](https://docs.google.com/spreadsheets/d/1xfA
  
 ## Solution
 Your solution content goes here... Please provide an explaination on 
-1. how you solved the problem
-2. how to setup 
-3. how to run it
-You could be as verbose as you would like for providing details on approach, setup etc.
 
 <img src='https://imgur.com/XvRD4Sd.gif' title='App Screenshot' width='400px' />
+
+### Functionality 
+
+#### Required
+[X] Design a full stack application which returns an infinite-scrolling list of trending products to the user.
+[X] A product can be qualified as trending if it is purchased at least once in last 48 hours
+[X] Each product should be tagged with two tags:
+    * a recent purchase tag: `5 purchased recently`
+    * a time tag `ordered 3 min ago`
+[X] Use a heuristic to determine which trending products gets returned higher. Base heuristic on both recency and number of recent purchases.
+
+#### Additions
+[X] Randomized food icon and trending icon with purchase price 
+
+## How you solved the problem
+   - This is an android studio app coded in Java with Firebase Database using provided sample data. 
+   - Pagination, 35 items loaded at a time, as items are loaded their counts are stored into a HashMap to return "recent purchases"
+   - 
+   
+
+## How to setup, how to run it
+   - Download Android Studio
+   - Connect to internet and to database --> Tools --> Firebase --> Realtime Database (should already be connected)
+   - Run Android app emulator (any model) 
+   
+
+You could be as verbose as you would like for providing details on approach, setup etc.
 
